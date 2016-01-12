@@ -156,15 +156,17 @@ public class RailFence
 		{ 
 			Scanner user_input1 = new Scanner( System.in );
 			String choice;
-			System.out.println("Enter a choice: (1 for user input, 2 to enter a file name)");
+			System.out.println("Enter a choice: \n 1. For user input " 
+													+ "\n 2. To enter a file name"
+													+ "\n 3. To read from RailFence.java");
 			choice = user_input1.next();
 				
-			do
+			if(choice.equals("1"))
 			{
 				System.out.println("Choice1 " );
 			
-			} while(choice.equals("1"));
-			do
+			}
+			else if(choice.equals("2"))
 			{
 			File cypherfile = new File("ShieldsAndSwords.txt"); // creates the file object
 			Scanner user_input2 = new Scanner( System.in );
@@ -191,17 +193,22 @@ public class RailFence
 			{
 				System.out.println("File Name is incorrect, Enter a correct one ");
 			}
-		}while(choice.equals("2"));
 		}
-
 		
+
+		else if(choice.equals("3"))
+				{
+				String s = new RailFence().decrypt("TTFOHATGRNREEANOETYRCIMHHAKT", 5);
+				System.out.println(">" + s);
+				}
+		else{
+			System.out.println("Incorrect Command! Please try again!");
+			}
+		}
 		catch (FileNotFoundException e)
 		{
 			e.printStackTrace();
 		}
 		
-		String s = new RailFence().decrypt("TTFOHATGRNREEANOETYRCIMHHAKT", 5);
-		System.out.println(">" + s);
-		 
 		}
 }
