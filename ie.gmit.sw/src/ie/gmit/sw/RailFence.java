@@ -158,13 +158,22 @@ public class RailFence
 			String choice;
 			System.out.println("Enter a choice: \n 1. For user input " 
 													+ "\n 2. To enter a file name"
-													+ "\n 3. To read from RailFence.java");
+													+ "\n 3. To read from 4grams.txt");
 			choice = user_input1.next();
 				
 			if(choice.equals("1"))
 			{
-				System.out.println("Choice1 " );
-			
+				Scanner enterText = new Scanner(System.in);
+				
+				RapidEncryption user = new RapidEncryption();
+				System.out.print("Type a message to encode: ");
+				String msg = enterText.nextLine();
+				user.dumpGrid();
+				System.out.println("Message you wanted to Encode: " + msg);
+				String inputText = new RailFence(). encrypt(msg, 5);
+				System.out.println("   Coded: " + inputText);
+				String inputText1 = new RailFence(). decrypt(inputText, 5);
+				System.out.println(" Decoded: " + inputText1);
 			}
 			else if(choice.equals("2"))
 			{
