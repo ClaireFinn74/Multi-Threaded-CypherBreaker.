@@ -178,7 +178,7 @@ public class RailFence
 			File cypherfile = new File("ShieldsAndSwords.txt"); // creates the file object
 			Scanner user_input2 = new Scanner( System.in );
 			String file_name;
-			System.out.println("Enter a File name");
+			System.out.println("Enter a File name (Case Sensitive) ");
 			file_name = user_input2.next();
 				
 			if(file_name.equals("ShieldsAndSwords.txt"))
