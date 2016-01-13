@@ -2,8 +2,6 @@ package ie.gmit.sw;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class RailFence
